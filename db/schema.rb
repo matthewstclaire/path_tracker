@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_175029) do
+ActiveRecord::Schema.define(version: 2020_11_03_165711) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.integer "user_id", null: false
+    t.integer "workout_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "paths", force: :cascade do |t|
+    t.integer "back_squat"
+    t.integer "bench_press"
+    t.integer "front_squat"
+    t.integer "clean_jerk"
+    t.integer "overhead_squat"
+    t.integer "strict_overhead_press"
+    t.integer "snatch"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,6 +46,14 @@ ActiveRecord::Schema.define(version: 2020_11_02_175029) do
     t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string "warmup"
+    t.string "power"
+    t.string "endurance"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

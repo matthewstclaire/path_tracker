@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  back_squat: MyString
+  bench_press: MyString
+  front_squat: MyString
+  clean_jerk: MyString
+  overhead_squat: MyString
+  strict_overhead_press: MyString
+  snatch: MyString
+
+two:
+  back_squat: MyString
+  bench_press: MyString
+  front_squat: MyString
+  clean_jerk: MyString
+  overhead_squat: MyString
+  strict_overhead_press: MyString
+  snatch: MyString
