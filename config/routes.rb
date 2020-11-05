@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :paths
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks' }
   
-  root to: "paths#index"
+  root to: "paths#home"
 end

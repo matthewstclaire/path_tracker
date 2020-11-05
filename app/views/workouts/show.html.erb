@@ -1,0 +1,11 @@
+<%=@workout.warmup%><br>
+<%=@workout.power%><br>
+<%=@workout.endurance%><br>
+<br>
+
+<%= form_for @workout.comments.build do |f| %>
+    
+    <%= f.label :content, "Progress Comment" %><br>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+    <% end %>

@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_11_03_165711) do
   end
 
   create_table "workouts", force: :cascade do |t|
+    t.string "workout_name"
     t.string "warmup"
     t.string "power"
     t.string "endurance"
