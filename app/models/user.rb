@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :workouts, through: :comments
   has_one :path
-  validates :user, uniqueness: true, presence: true
+  validates :name, uniqueness: true, presence: true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable
 

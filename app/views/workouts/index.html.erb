@@ -1,8 +1,10 @@
 <%= render partial: "nav" %>
 
-<button type="button" class="btn btn-secondary" title="" data-container="body" data-toggle="popover" data-placement="left" data-content=<%@workouts.each do |workout|%>
-        <li><%=workout.warmup%><br></li>
-        <li><%=workout.power%><br></li>
-        <li><%=workout.endurance%><br></li>
-    <%end%>
-    data-original-title="Popover Title" aria-describedby="popover763764">Left</button>
+
+<h1>Hello <%=current_user.name%></h1>
+
+<%@workouts.each do |workout|%>
+    <%=link_to workout.workout_name, workout_path(workout)%><br>
+    <%=link_to workout.created_at, workout_path(workout)%><br>
+<br>
+<%end%>

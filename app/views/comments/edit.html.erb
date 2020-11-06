@@ -1,0 +1,6 @@
+<%= form_for @workout.comment.build do |f| %>
+    <%= f.hidden_field :workout_id %>
+    <%= f.label :content, "Progress Comment" %><br>
+    <%= f.text_area :content %><br>
+    <%= f.submit %>
+    <% end %>

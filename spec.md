@@ -62,9 +62,9 @@ Throughout: Keep in mind partials and helpers -- for use in views
 -[x] test relationships in rails console
     - create some objects and create associated objects (rails c -s)
 -[x] make seed data
--[ ] write your routes
--[ ] make CRUD routes for one of your parent controllers (note: parent controller examples - the 'owners', has the "has many through)
-    - [ ]make associated views for those
+-[x] write your routes
+-[x] make CRUD routes for one of your parent controllers (note: parent controller examples - the 'owners', has the "has many through)
+    - [x]make associated views for those
 -[ ] build out the rest of the functionality
 *** At this point look for redundancies, DRY up your code using partials and helpers ***
 -[ ] scope methods

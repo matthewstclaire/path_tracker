@@ -1,0 +1,9 @@
+<%= render partial: "workouts/nav" %>
+
+<h1>Your Comments</h1>
+
+<ul>
+    <%@comments.each do |comment|%>
+        <li><%=link_to comment.content, workout_comments_path(comment)%><br></li>
+    <%end%>
+</ul>

@@ -22,10 +22,20 @@ class WorkoutsController < ApplicationController
         end
     end
 
+    def edit
+        @workout = Workout.find(params[:id])
+    end
+
+    def update
+        @workout = Workout.find(params[:id])
+        @workout.update(workout_params)
+        redirect_to workout_path(@workout)
+    end
+
 private
 
     def workout_params
-        params.require(:workout).permit(:warmup, :power, :endurance, comments_attributes: [:content])
+        params.require(:workout).permit(:workout_name, :warmup, :power, :endurance, comments_attributes: [:content])
     end
 
 end

@@ -1,0 +1,13 @@
+<h1 class="table-active">Add New Workout</h1>
+<%= form_for @workout do |f| %>
+    <h3>Workout Name/Date</h3>
+    <%= f.text_field :workout_name %><br>
+    <h3>Warm Up</h3>
+    <%= f.text_field :warmup %><br>
+    <h3>Power</h3>
+    <%= f.text_field :power %><br>
+    <h3>Endurance</h3>
+    <%= f.text_field :endurance %><br>
+    <br>
+    <%= f.submit %>
+  <% end %>
