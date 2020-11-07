@@ -2,7 +2,7 @@ class WorkoutsController < ApplicationController
     before_action :require_login
 
     def show
-        @workout = Workout.find(params[:id])
+        helper_id
     end
 
     def index
@@ -24,7 +24,7 @@ class WorkoutsController < ApplicationController
     end
 
     def edit
-        @workout = Workout.find(params[:id])
+        helper_id
     end
 
     def update

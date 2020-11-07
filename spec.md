@@ -68,7 +68,7 @@ Throughout: Keep in mind partials and helpers -- for use in views
 -[ ] build out the rest of the functionality
 *** At this point look for redundancies, DRY up your code using partials and helpers ***
 -[ ] scope methods
--[ ] validations
+-[x] validations
 -[ ] test all forms and features
 -[ ] styling, if you want to
     - CSS, HTML, bootstrap, materialize, JS
