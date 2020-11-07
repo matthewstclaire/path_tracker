@@ -1,4 +1,4 @@
-<%= render partial: "nav" %>
+
 
 <h1 class="table-active">Add New Workout</h1>
 <%= form_for @workout do |f| %>
@@ -13,3 +13,5 @@
     <br>
     <%= f.submit %>
   <% end %>
+
+  <%= render 'flash_message' %>

@@ -1,5 +1,3 @@
-<%= render partial: "nav" %>
-
 <h3><%=@workout.workout_name%></h3><br>
 <h5>Warm Up</h5>
 <%=@workout.warmup%><br>
@@ -11,18 +9,22 @@
 <%=@workout.endurance%><br>
 <br>
 <h5><%=link_to "Edit This Workout", edit_workout_path%></h5>
+<br>
 
-    <%if !@workout.comments.nil?%>
-    <h2>Submit a Comment</h2>
-        <%= form_for @workout.comments.build do |f| %>
-            <%= f.hidden_field :workout_id %>
-            <%= f.label :content, "Progress Comment" %><br>
-            <%= f.text_area :content %><br>
-            <%= f.submit %>
-            <% end %>
-    <% else %>
-    <h2>Your Comments</h2>
-        <%@workout.comments.each do |comment|%>
-            <%=comment.content%><br>
-        <% end %>
-    <% end %>
+<h3>Submit a Comment About This Workout</h3>
+<%= form_for @workout.comments.build do |f| %>
+    <%= f.hidden_field :workout_id %>
+    <%= f.label :content, "Progress Comment" %><br>
+    <%= f.text_area :content %><br>
+    <%= f.submit %>
+    <%end%>
+<br>
+
+<%if @workout.comments.nil?%>
+    <h3>Your comments will be displayed below.</h3>
+<% else %>
+    <h3>Your Comments</h3>
+    <%@workout.comments.each do |comment|%>
+        <%=comment.content%><br>
+    <%end%>
+<%end%>

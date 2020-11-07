@@ -1,0 +1,5 @@
+<% if !!flash[:errors] %>
+2  <% flash[:errors].each do |error| %>
+3    <p><%= error %></p> <br>
+4    <% end %>
+5  <% end %>

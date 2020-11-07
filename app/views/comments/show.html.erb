@@ -1,5 +1,7 @@
-<%= render partial: "workouts/nav" %>
- <h1>Your Comment</h1> 
-<%=@comment.content%>
 
+ <h1>Your Comment</h1> 
+<%=@comment.content%><br>
+<%=@comment.created_at.strftime("%B %d, %Y at %H:%M")%><br>
+<br>
 <h1><%=link_to "Edit Comment", edit_workout_comment_path%></h1>
+<h1><%=link_to "Delete Comment", workout_comment_path(@comment), method: :delete%></h1>

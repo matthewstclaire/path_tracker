@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
         redirect_to workout_comment_path(comment.workout_id, comment)
       end
 
-      def edit
+    def edit
         @comment = Comment.find(params[:id])
     end
 
@@ -26,9 +26,16 @@ class CommentsController < ApplicationController
         @comment.update(comment_params)
         redirect_to workout_comment_path(@comment)
     end
+
+    def destroy
+        @comment = Comment.find(params[:id])
+        @comment.destroy
+    
+        redirect_to workouts_path
+      end
+
 private
       def comment_params
         params.require(:comment).permit(:content, :workout_id, :user_id, user_attributes:[:name])
       end
-
 end
