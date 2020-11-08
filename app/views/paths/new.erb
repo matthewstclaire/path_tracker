@@ -1,0 +1,21 @@
+<h1 class="table-active">Create Your Path</h1>
+<%= form_for @path do |f| %>
+    <h3>Back Squat</h3>
+    <%= f.text_field :back_squat %><br>
+    <h3>Bench Press</h3>
+    <%= f.text_field :bench_press %><br>
+    <h3>Front Squat</h3>
+    <%= f.text_field :front_squat %><br>
+    <h3>Clean and Jerk</h3>
+    <%= f.text_field :clean_jerk %><br>
+    <h3>Overheard Squat</h3>
+    <%= f.text_field :overhead_squat %><br>
+    <h3>Strict Overhead Press</h3>
+    <%= f.text_field :strict_overhead_press %><br>
+    <h3>Snatch</h3>
+    <%= f.text_field :snatch %><br>
+    <br>
+    <%= f.submit %>
+  <% end %>
+
+  <%= render '/workouts/flash_message' %>
