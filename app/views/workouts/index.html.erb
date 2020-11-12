@@ -1,7 +1,8 @@
-<h1>Hello <%=current_user.name%></h1><br>
+
+<h1>Hello, <%=current_user.name%></h1><br>
 
 <h2>Your Workouts:</h2>
-<%@workouts.each do |workout|%>
+<%current_user.workouts.each do |workout|%>
     <%=link_to workout.workout_name, workout_path(workout)%><br>
     <p>Created:<%=link_to workout.created_at.strftime("%B %d, %Y at %H:%M"), workout_path(workout)%><br><p> 
     <br>

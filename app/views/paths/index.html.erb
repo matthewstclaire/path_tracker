@@ -1,1 +1,12 @@
-<h1>Your Path This Is Home I See</h1>
+<%if !@paths.nil?%>
+<h1>Barbell Goals</h1>
+<h3>Back Squat: <%=@paths.back_squat%></h3>
+<h3> Bench Press: <%=@paths.bench_press%></h3>
+<h3>Front Squat: <%=@paths.front_squat%></h3>
+<h3>Clean and Jerk: <%=@paths.clean_jerk%></h3>
+<h3>Overhead Squat: <%=@paths.overhead_squat%></h3>
+<h3>Strict Overhead Press: <%=@paths.strict_overhead_press%></h3>
+<h3>Snatch: <%=@paths.snatch%></h3>
+<% else %>
+<h1>You do not have a path created? Create a path <%=link_to "Here", new_path_path %></h1>
+<%end%>

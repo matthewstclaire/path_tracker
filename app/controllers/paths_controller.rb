@@ -6,7 +6,7 @@ class PathsController < ApplicationController
     end
 
     def index
-        @paths = Path.all 
+        @paths = current_user.path
     end
 
     def new
@@ -14,10 +14,11 @@ class PathsController < ApplicationController
     end
 
     def create
-        @path = Path.create(path_params)
-        # binding.pry
+        
+        @path = current_user.build_path(path_params)
+      
         if @path.save
-        # binding.pry
+        
             redirect_to path_path(@path)
         else
             flash[:errors] = @path.errors.full_messages
