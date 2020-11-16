@@ -1,25 +1,16 @@
-# README
+# Path Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
+Path Tracker is an interactive platform inspired by a gym I currently attend known as The Sect. Members of The Sect currently keep track of their progress through a piece of paper known as their "Path." I made this application as a means to help streamline the process of the path. Through this app you're able to track daily workouts and check progress on your path. 
 
-* Ruby version
+## Install Instructions
 
-* System dependencies
+In order to use this database, clone the repository in your terminal with the following:
 
-* Configuration
+`https://github.com/matthewxvoorhees/path_tracker`
 
-* Database creation
+Start a local server using the command `rails s` You'll then head to your browser and type in `https:localhost:3000` to begin a session. 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# path_tracker
+## License
+This database is available as open source under the terms of the MIT License.
