@@ -1,0 +1,12 @@
+<%= form_with model: @workout do |f| %>
+    <h3>Workout Name</h3>
+    <%= f.text_field :workout_name %><br>
+    <h3>Warm Up</h3>
+    <%= f.text_area :warmup %><br>
+    <h3>Power</h3>
+    <%= f.text_area :power %><br>
+    <h3>Endurance</h3>
+    <%= f.text_area :endurance %><br>
+    <br>
+    <%= f.submit %>
+  <% end %>

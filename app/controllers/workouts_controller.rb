@@ -33,10 +33,6 @@ class WorkoutsController < ApplicationController
         redirect_to workout_path(@workout)
     end
 
-    def active
-        @active = current_user.workouts.active_user
-    end
-
 private
 
     def workout_params

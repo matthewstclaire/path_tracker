@@ -14,11 +14,8 @@ class PathsController < ApplicationController
     end
 
     def create
-        
         @path = current_user.build_path(path_params)
-      
         if @path.save
-        
             redirect_to path_path(@path)
         else
             flash[:errors] = @path.errors.full_messages
@@ -31,6 +28,4 @@ class PathsController < ApplicationController
     def path_params
         params.require(:path).permit(:back_squat, :bench_press, :front_squat, :clean_jerk, :overhead_squat, :strict_overhead_press, :snatch)
     end
-
-
 end
